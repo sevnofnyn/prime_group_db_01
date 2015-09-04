@@ -6,4 +6,9 @@ html
   body
     block content
     script(src="javascripts/jquery.min.js")
+    script(src='/javascripts/handlebars.min.js')
     script(src="javascripts/scripts.js")
+    script(id="assignment-template" type="text/x-handlebars-template")
+        |{{#each this}}
+        li(id= "{{_id}}") <strong>Assignment:</strong> {{assignment_name}} <strong>Student:</strong> {{student_identity}} <strong>Score:</strong> {{score}} <strong>Completed:</strong> {{date_completed}}
+        |{{/each}}

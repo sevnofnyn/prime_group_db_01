@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+input[type="text"] {
+    margin: 10px;
+    width: 200px;
+}
+
+li {
+    margin: 10px;
+}

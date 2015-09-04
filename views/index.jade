@@ -3,11 +3,14 @@ extends layout
 block content
   h1= title
   form
-    input(type="text" id="name" placeholder="enter assignment name")
-    input(type="text" id="student" placeholder="enter student name")
-    input(type="text" id="score" placeholder="enter score")
-    input(type="text" id="date" placeholder="enter date completed")
-    input(type="submit" value="submit")
+      fieldset
+        legend
+            |Add an assignment
+        input(type="text" id="assignment" name="assignment_name" placeholder="enter assignment name")
+        input(type="text" id="student" name="student_identity" placeholder="enter student name")
+        input(type="text" id="score" name="score" placeholder="enter score")
+        input(type="text" id="date" name="date_completed" placeholder="enter date completed")
+        input(type="submit" value="submit")
   ul
     each assignment in assignments
         include ./assignments.jade

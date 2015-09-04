@@ -13,7 +13,8 @@ router.get('/:assignment_name?', function(req, res, next) {
       console.log(err);
       next(err);
     }else {
-      res.render('index', {assignments: assignment});
+      //res.render('index', {assignments: assignment});
+		res.json(assignment);
     }
   });
   //res.send('respond with a resource');
